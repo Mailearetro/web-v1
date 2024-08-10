@@ -1,11 +1,7 @@
-import React from 'react'
-import { Button } from '@/components/ui/button'
+import React from "react";
+import { Button } from "@/components/ui/button";
 function Home() {
-  return (
-    <div>
-<Button></Button>
-    </div>
-  )
+  return <div></div>;
 }
 
-export default Home
+export default Home;

@@ -1,12 +1,12 @@
-import {configureStore} from '@reduxjs/toolkit';
-import { authSlice } from './services';
+import { configureStore } from "@reduxjs/toolkit";
+import { authSlice, userMessageSlice, modelMessageSlice } from "./services";
 
 const store = configureStore({
-    reducer: {
-        auth: authSlice
-        //TODO: add more slices here for posts
-    }
+  reducer: {
+    auth: authSlice,
+    userMessage: userMessageSlice,
+    modelMessage: modelMessageSlice,
+  },
 });
-
 
 export default store;

@@ -7,11 +7,13 @@ import store from "./store/store.ts";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home.tsx";
 import { ThemeProvider } from "./components/ThemeProvider.tsx";
+import { KindeProvider } from "@kinde-oss/kinde-auth-react";
+import Dashboard from "./pages/Dashboard.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App  />,
+    element: <App />,
     children: [
       {
         path: "/",
@@ -33,15 +35,14 @@ const router = createBrowserRouter([
       //     </AuthLayout>
       //   ),
       // },
-      // {
-      //   path: "/all-posts",
-      //   element: (
-      //     <AuthLayout authentication>
-      //       {" "}
-      //       <AllPosts />
-      //     </AuthLayout>
-      //   ),
-      // },
+      {
+        path: "/chat-dashboard",
+        element: (
+          // <AuthLayout authentication>
+          <Dashboard />
+          // </AuthLayout>
+        ),
+      },
       // {
       //   path: "/add-post",
       //   element: (
@@ -69,9 +70,16 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <Provider store={store}>
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-    <RouterProvider router={router}  />
-    </ThemeProvider>
-  </Provider>
+  <KindeProvider
+    clientId={import.meta.env.VITE_KINDE_CLIENT_ID}
+    domain={import.meta.env.VITE_KINDE_DOMAIN}
+    logoutUri={window.location.origin}
+    redirectUri={window.location.origin}
+  >
+    <Provider store={store}>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </Provider>
+  </KindeProvider>
 );
