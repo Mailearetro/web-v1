@@ -9,16 +9,17 @@ import Home from "./pages/Home.tsx";
 import { ThemeProvider } from "./components/ThemeProvider.tsx";
 import { KindeProvider } from "@kinde-oss/kinde-auth-react";
 import Dashboard from "./pages/Dashboard.tsx";
+import PageNotFound from "./components/PageNotFound.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
+      // {
+      //   path: "/",
+      //   element: <Home />,
+      // },
       // {
       //   path: "/login",
       //   element: (
@@ -43,15 +44,14 @@ const router = createBrowserRouter([
           // </AuthLayout>
         ),
       },
-      // {
-      //   path: "/add-post",
-      //   element: (
-      //     <AuthLayout authentication>
-      //       {" "}
-      //       <AddPost />
-      //     </AuthLayout>
-      //   ),
-      // },
+      {
+        path: "*",
+        element: (
+          // <AuthLayout authentication>
+            <PageNotFound />
+          //  </AuthLayout>
+        ),
+      },
       // {
       //   path: "/edit-post/:slug",
       //   element: (
