@@ -40,6 +40,7 @@ function Header() {
           <div className="w-full flex  flex-col lg:flex-row">
             <div className=" flex justify-between  lg:flex-row">
               <a href="https://pagedone.io/" className="flex items-center">
+               <img src="/LogoSVG.svg" alt=""  className="w-[80px] h-[33px]"/>
                 {/* <svg
                   width="164"
                   height="33"

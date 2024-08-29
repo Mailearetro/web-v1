@@ -85,13 +85,10 @@ function Home() {
           </div>
         </div>
         <FeaturesSectionDemo2  />
-        <Pricing />
-
-        <Cta />
-
         <HowItWorksSection />
-
         <Integrations />
+        <Pricing />
+        <Cta />
       </div>
     </div>
   );

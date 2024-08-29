@@ -1,15 +1,41 @@
 import Container from "./Container";
-
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 function HeroSection() {
+  const words = [
+    {
+      text: "Optimize",
+    },
+    {
+      text: "Your",
+    },
+    {
+      text: "Emailbox",
+    },
+    {
+      text: "with",
+    },
+    {
+      text: "Maileyo",
+      className: "text-indigo-600 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+    },
+  ];
   return (
     <Container>
       <section className="pt-8 lg:pt-32 bg-[url('https://pagedone.io/asset/uploads/1691055810.png')] bg-center bg-cover">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-          <div className="border border-indigo-600 p-1 w-52 mx-auto rounded-full flex items-center justify-between mb-4">
-            <span className="font-inter text-xs font-medium text-gray-900 ml-3">
+       <div className=" flex justify-center text-center">
+            {/* <span className="font-inter text-xs font-medium text-gray-900 ml-3">
               Be part of our first launch
-            </span>
-            <a
+            </span> */}
+             <HoverBorderGradient
+        containerClassName="rounded-full"
+        as="button"
+        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+      >
+     
+        <span>Subscribe for latest launch</span>
+        <a
               href="javascript:;"
               className="w-8 h-8 rounded-full flex justify-center items-center bg-indigo-600"
             >
@@ -29,12 +55,15 @@ function HeroSection() {
                 />
               </svg>
             </a>
+      </HoverBorderGradient>
+           
           </div>
-          <h1 className="max-w-2xl mx-auto text-center font-manrope font-bold text-4xl text-gray-900 mb-5 md:text-5xl leading-[50px]">
-            Optimize Your Emailbox With
-
-            <span className="text-indigo-600 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"> Maileyo </span>
+          <h1 className="max-w-4xl mx-auto text-center font-manrope font-bold text-4xl text-gray-900 mb-5 md:text-5xl leading-[50px]">
+            {/* Optimize Your Emailbox With */}
+ <TypewriterEffectSmooth words={words} />
+            {/* <span className="text-indigo-600 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"> Maileyo </span> */}
           </h1>
+         
           <p className="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-500 mb-9">
           The AI-powered tool for seamless email management. Search, organize, and prioritize your emails .
           </p>
