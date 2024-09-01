@@ -7,13 +7,11 @@ function Integrations() {
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
           <div className="w-full flex-col justify-start items-center lg:gap-11 gap-8 inline-flex">
             <div className="w-full flex-col justify-start items-center gap-2.5 flex">
-              <h2 className="text-center text-gray-900 text-3xl font-bold font-manrope leading-normal">
+              <h2 className="text-center text-indigo-600 text-3xl font-bold font-manrope leading-normal">
                 Integrations
               </h2>
               <p className="max-w-4xl mx-auto text-center text-gray-500 text-lg font-normal leading-8">
-                Integrations refer to the process of combining different
-                software systems or components to work together seamlessly. This
-                involves connecting various applications.
+              Maileyo seamlessly connects with the tools you already use every day. Whether it's your calendar, task manager, or favorite apps, Maileyo brings everything together in one place. No more switching between different platforms—now you can manage your emails and stay organized without missing a beat. With Maileyo, your workflow becomes smoother and more efficient, helping you get things done faster.
               </p>
             </div>
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-start items-start gap-8">

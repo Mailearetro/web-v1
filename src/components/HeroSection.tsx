@@ -17,55 +17,55 @@ function HeroSection() {
     },
     {
       text: "Maileyo",
-      className: "text-indigo-600 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+      className:
+        "text-indigo-600 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
     },
   ];
   return (
     <Container>
       <section className="pt-8 lg:pt-32 bg-[url('https://pagedone.io/asset/uploads/1691055810.png')] bg-center bg-cover">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-       <div className=" flex justify-center text-center">
+          <div className=" flex justify-center text-center">
             {/* <span className="font-inter text-xs font-medium text-gray-900 ml-3">
               Be part of our first launch
             </span> */}
-             <HoverBorderGradient
-        containerClassName="rounded-full"
-        as="button"
-        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-      >
-     
-        <span>Subscribe for latest launch</span>
-        <a
-              href="javascript:;"
-              className="w-8 h-8 rounded-full flex justify-center items-center bg-indigo-600"
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
-              <svg
-                width="17"
-                height="16"
-                viewBox="0 0 17 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <span>Subscribe for our first launch</span>
+              <a
+                href="https://maileyo.framer.website/"
+                className="w-8 h-8 rounded-full flex justify-center items-center bg-indigo-600"
               >
-                <path
-                  d="M2.83398 8.00019L12.9081 8.00019M9.75991 11.778L13.0925 8.44541C13.3023 8.23553 13.4073 8.13059 13.4073 8.00019C13.4073 7.86979 13.3023 7.76485 13.0925 7.55497L9.75991 4.22241"
-                  stroke="white"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-      </HoverBorderGradient>
-           
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.83398 8.00019L12.9081 8.00019M9.75991 11.778L13.0925 8.44541C13.3023 8.23553 13.4073 8.13059 13.4073 8.00019C13.4073 7.86979 13.3023 7.76485 13.0925 7.55497L9.75991 4.22241"
+                    stroke="white"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </HoverBorderGradient>
           </div>
           <h1 className="max-w-4xl mx-auto text-center font-manrope font-bold text-4xl text-gray-900 mb-5 md:text-5xl leading-[50px]">
             {/* Optimize Your Emailbox With */}
- <TypewriterEffectSmooth words={words} />
+            <TypewriterEffectSmooth words={words} />
             {/* <span className="text-indigo-600 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"> Maileyo </span> */}
           </h1>
-         
+
           <p className="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-500 mb-9">
-          The AI-powered tool for seamless email management. Search, organize, and prioritize your emails .
+            The AI-powered tool for seamless email management. Search, organize,
+            and prioritize your emails .
           </p>
           <a
             className="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 focus:outline-none focus:from-violet-600 focus:to-blue-600 border border-transparent text-white text-sm font-medium rounded-full py-3 px-4"
@@ -103,11 +103,24 @@ function HeroSection() {
             Continue with Gmail
           </a>
           <div className="flex justify-center">
-            <img
+            {/* <img
               src="https://pagedone.io/asset/uploads/1691054543.png"
               alt="Dashboard image"
               className="rounded-t-3xl"
-            />
+            /> */}
+
+            <video
+              className="rounded-t-3xl shadow-[0_20px_50px_rgba(8,_12,_184,_0.9)]"
+              
+              muted
+              controls
+            >
+              <source
+                src="https://pagedone.io/asset/uploads/1705298724.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </section>

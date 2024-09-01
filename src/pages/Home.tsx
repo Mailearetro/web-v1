@@ -25,12 +25,7 @@ function Home() {
             </>
           }
         >
-          <img
-            src=""
-            alt="hero"
-            className="mx-auto rounded-2xl object-cover h-full object-left-top"
-            draggable={false}
-          />
+          <img src="https://th.bing.com/th/id/R.4c0e413dadea8f8d613193601ad1647d?rik=O78tL548%2fhVkkA&riu=http%3a%2f%2funblast.com%2fwp-content%2fuploads%2f2020%2f04%2fChat-Dashboard-UI-Template-1.jpg&ehk=l0R%2bTcRf2sTTelNfRXgxnFujtfjmqTu4DjKUvzHWtZY%3d&risl=&pid=ImgRaw&r=0" alt="" />
         </ContainerScroll>
       </div>
       <div className="w-full">
