@@ -7,6 +7,12 @@ import {
 
   IconTerminal2,
 } from "@tabler/icons-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 export function FeaturesSectionDemo2() {
   const features = [

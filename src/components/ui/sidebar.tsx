@@ -1,9 +1,9 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { Link ,LinkProps } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React, { useState, createContext, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { IconMenu2, IconX } from "@tabler/icons-react";
 
 interface Links {
   label: string;
@@ -21,7 +21,6 @@ const SidebarContext = createContext<SidebarContextProps | undefined>(
   undefined
 );
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const useSidebar = () => {
   const context = useContext(SidebarContext);
   if (!context) {
@@ -90,14 +89,15 @@ export const DesktopSidebar = ({
     <>
       <motion.div
         className={cn(
-          "h-full px-4 py-4 hidden  md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[300px] flex-shrink-0",
+          "h-full  py-2 hidden  md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[300px] flex-shrink-0",
           className
         )}
         animate={{
-          width: animate ? (open ? "300px" : "60px") : "300px",
+          width: animate ? (open ? "300px" : "64px") : "300px",
         }}
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
+        // TODO: Add click effect instead of hover effect to the sidebar
+        // onMouseEnter={() => setOpen(true)}
+        // onMouseLeave={() => setOpen(false)}
         {...props}
       >
         {children}
@@ -121,6 +121,10 @@ export const MobileSidebar = ({
         {...props}
       >
         <div className="flex justify-end z-20 w-full">
+          <IconMenu2
+            className="text-neutral-800 dark:text-neutral-200"
+            onClick={() => setOpen(!open)}
+          />
         </div>
         <AnimatePresence>
           {open && (
@@ -141,7 +145,7 @@ export const MobileSidebar = ({
                 className="absolute right-10 top-10 z-50 text-neutral-800 dark:text-neutral-200"
                 onClick={() => setOpen(!open)}
               >
-             
+                <IconX />
               </div>
               {children}
             </motion.div>
@@ -166,22 +170,21 @@ export const SidebarLink = ({
     <Link
       to={link.href}
       className={cn(
-        "flex items-center justify-start gap-2  group/sidebar py-2",
+        " items-center justify-start gap-2  group/sidebar py-2  mx-auto",
         className
       )}
       {...props}
     >
-      {link.icon}
+        {link.icon}
 
-      <motion.span
-        animate={{
-          display: animate ? (open ? "inline-block" : "none") : "inline-block",
-          opacity: animate ? (open ? 1 : 0) : 1,
-        }}
-        className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+<div className="flex justify-center items-center">
+      <span
+       
+        className="text-[11px] dark:text-neutral-200   font-medium   text-[#4b5563]"
       >
         {link.label}
-      </motion.span>
+      </span>
+      </div>
     </Link>
   );
 };

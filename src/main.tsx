@@ -13,6 +13,7 @@ import PageNotFound from "./components/PageNotFound.tsx";
 import EmailDisplay from "./pages/EmailDisplay.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
+import { Chat } from "./pages/chat.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,7 +43,8 @@ const router = createBrowserRouter([
         path: "/chat-dashboard",
         element: (
           // <AuthLayout authentication>
-          <Dashboard />
+          // <Dashboard />
+          <Chat />
           // </AuthLayout>
         ),
       },
