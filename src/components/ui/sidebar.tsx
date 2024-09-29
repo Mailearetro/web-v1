@@ -116,13 +116,13 @@ export const MobileSidebar = ({
     <>
       <div
         className={cn(
-          "h-10 px-4 py-4 flex flex-row md:hidden  items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
+          " px-4  flex  flex-row md:hidden  items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
         )}
         {...props}
       >
-        <div className="flex justify-end z-20 w-full">
+        <div className="fixed top-[1.1rem]  justify-end z-20 w-full">
           <IconMenu2
-            className="text-neutral-800 dark:text-neutral-200"
+            className="text-neutral-800 dark:text-neutral-200 h-5 w-5"
             onClick={() => setOpen(!open)}
           />
         </div>
@@ -159,10 +159,12 @@ export const MobileSidebar = ({
 export const SidebarLink = ({
   link,
   className,
+  handleCategories,
   ...props
 }: {
   link: Links;
   className?: string;
+ handleCategories?:(category:string)=>void;
   props?: LinkProps;
 }) => {
   const { open, animate } = useSidebar();
@@ -174,6 +176,7 @@ export const SidebarLink = ({
         className
       )}
       {...props}
+      onClick={()=>handleCategories(link.label)}
     >
         {link.icon}
 

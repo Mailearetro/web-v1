@@ -8,12 +8,15 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home.tsx";
 // import { ThemeProvider } from "./components/ThemeProvider.tsx";
 import { KindeProvider } from "@kinde-oss/kinde-auth-react";
-import Dashboard from "./pages/Dashboard.tsx";
+// import Dashboard from "./pages/Dashboard.tsx";
 import PageNotFound from "./components/PageNotFound.tsx";
 import EmailDisplay from "./pages/EmailDisplay.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
 import { Chat } from "./pages/chat.tsx";
+import TermsAndConditions from "./pages/TermsAndConditions.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import {OAuthSelection} from "./pages/oAuthSelection.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -49,6 +52,15 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/oauth-select",
+        element: (
+          // <AuthLayout authentication>
+          // <Dashboard />
+          <OAuthSelection/>
+          // </AuthLayout>
+        ),
+      },
+      {
         path: "*",
         element: (
           // <AuthLayout authentication>
@@ -77,6 +89,22 @@ const router = createBrowserRouter([
         element: (
           // <AuthLayout authentication>
             <AboutUs/>
+          //  </AuthLayout>
+        ),
+      },
+      {
+        path: "/privacy-policy",
+        element: (
+          // <AuthLayout authentication>
+            <PrivacyPolicy/>
+          //  </AuthLayout>
+        ),
+      },
+      {
+        path: "/terms-and-conditions",
+        element: (
+          // <AuthLayout authentication>
+            <TermsAndConditions/>
           //  </AuthLayout>
         ),
       },

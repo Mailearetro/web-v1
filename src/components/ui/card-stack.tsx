@@ -63,13 +63,13 @@ export const CardStack = ({
 
 
   return (
-    <div className="relative  h-40 min-w-full md:h-52 md:w-96">
+    <div className="relative  h-40 min-w-full md:h-32 md:w-64">
       {cards.map((card, index) => {
   return (
     <motion.div
       key={card.id}
       onClick={openDialog}
-      className="absolute dark:bg-black bg-white h-40 min-w-full md:h-40 md:w-auto rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between  hover:cursor-pointer"
+      className="absolute dark:bg-black bg-white h-auto  md:h-28 md:w-64 w-40 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between  hover:cursor-pointer"
       style={{
         transformOrigin: "top center",
       }}
@@ -80,7 +80,7 @@ export const CardStack = ({
       }}
       onClick={() => { console.log(`Card ${card.id} clicked`); openDialog() }}
     >
-      <div className="flex items-center gap-x-3 ">
+      <div className="md:flex items-center gap-x-3  text-center md:text-left">
         <img
           className="inline-block size-[38px] rounded-full"
           src={card.avatar}
@@ -96,7 +96,7 @@ export const CardStack = ({
           </span>
           </div>
           <div>
-          <p className="text-neutral-500 font-medium dark:text-white">
+          <p className="text-neutral-500 font-medium dark:text-white md:block hidden">
           {card.created}
         </p>
         </div>

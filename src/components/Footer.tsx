@@ -11,30 +11,30 @@ function Footer() {
             <img src="/LogoSVG.svg" alt="" className='w-20 mx-auto' />
             <ul className="text-lg flex items-center justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 mb-10 border-b border-gray-200">
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-900">
+                <a href="/" className="text-gray-800 hover:text-gray-900">
                   Pagedone
                 </a>
               </li>
               {/* <li><a href="#" className=" text-gray-800 hover:text-gray-900">Products</a></li> */}
               <li>
-                <a href="#" className=" text-gray-800 hover:text-gray-900">
+                <a href="/" className=" text-gray-800 hover:text-gray-900">
                   Resources
                 </a>
               </li>
               <li>
-                <a href="#" className=" text-gray-800 hover:text-gray-900">
+                <a href="/" className=" text-gray-800 hover:text-gray-900">
                   Blogs
                 </a>
               </li>
               <li>
-                <a href="#" className=" text-gray-800 hover:text-gray-900">
+                <a href="/" className=" text-gray-800 hover:text-gray-900">
                   Support
                 </a>
               </li>
             </ul>
             <div className="flex space-x-10 justify-center items-center mb-14">
               <a
-                href="#"
+                href="/"
                 className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
               >
                 <svg
@@ -50,7 +50,7 @@ function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="/"
                 className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
               >
                 <svg
@@ -66,7 +66,7 @@ function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="/"
                 className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
               >
                 <svg
@@ -82,7 +82,7 @@ function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="/"
                 className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
               >
                 <svg
@@ -92,8 +92,7 @@ function Footer() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                   
                     d="M26.3106 1.27838C27.5782 1.62071 28.5745 2.61957 28.9113 3.88573C29.524 6.18356 29.524 10.9809 29.524 10.9809C29.524 10.9809 29.524 15.7782 28.9113 18.076C28.5698 19.3469 27.5735 20.3457 26.3106 20.6834C24.0186 21.2977 14.8226 21.2977 14.8226 21.2977C14.8226 21.2977 5.63122 21.2977 3.33456 20.6834C2.06695 20.3411 1.07063 19.3422 0.73385 18.076C0.121094 15.7782 0.121094 10.9809 0.121094 10.9809C0.121094 10.9809 0.121094 6.18356 0.73385 3.88573C1.07531 2.61488 2.07162 1.61602 3.33456 1.27838C5.63122 0.664062 14.8226 0.664062 14.8226 0.664062C14.8226 0.664062 24.0186 0.664062 26.3106 1.27838ZM19.5234 10.9809L11.885 15.403V6.55872L19.5234 10.9809Z"
                     fill="currentColor"
                   />
